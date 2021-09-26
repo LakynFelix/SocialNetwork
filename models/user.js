@@ -1,6 +1,6 @@
-const {schema, model } = require('mongoose');
+const {Schema, model } = require('mongoose');
 
-const userSchema = new schema({
+const userSchema = new Schema({
     username: {
         type: String,
         required: true,
@@ -16,11 +16,11 @@ const userSchema = new schema({
         ],
     },
     thoughts: [{
-        type: schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Thought',
     }],
     friends: [{
-        type: schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'User',
     }],
 }, {

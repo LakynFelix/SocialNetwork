@@ -16,7 +16,7 @@ Mongoose & MongoDB SocialNetwork
  Clone Repo -  Run npm install and then (npm start) to start the server. 
  
 
-## Project:
+# Project:
 ## GitHub Profile: https://github.com/LakynFelix   
 ## GitHub Repo:  https://github.com/LakynFelix/SocialNetwork
 ## Email: Lakynmphotography@hotmail.com 

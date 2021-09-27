@@ -28,27 +28,23 @@ const userSchema = new Schema({
           ref: "User",
         },
       ],
-    thoughts: [
-      {
+    },
+    {
+
+    thoughts: [{
         type: Schema.Types.ObjectId,
         ref: 'Thought',
-    
-      },
-    ],
-    friends: [
-      {
+    }],
+    friends: [{
         type: Schema.Types.ObjectId,
         ref: 'User',
-    },
-  ],
-
-},
-      {
-        toJSON: {
-            virtuals: true,
-            getters: true,
-        },
-        id: false,
+    }],
+}, {
+    toJSON: {
+        virtuals: true,
+        getters: true,
+      },
+      id: false,
     }
   );
   

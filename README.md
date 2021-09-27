@@ -27,8 +27,8 @@ Mongoose & MongoDB SocialNetwork
 ## Video 
 
 
-# License:  
+## License:  
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
   
- # Collaborators:
+ ## Collaborators:
  NONE   

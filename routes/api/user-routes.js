@@ -8,20 +8,21 @@ const {
     deleteUser,
     addFriend,
     removeFriend,
-} = require('../../controllers/thought-controller');
+} = require('../../controllers/user-controller');
 
 router
-.get('/',getAllUsers)
+.route('/')
+.get(getAllUsers)
 .post(createUser);
 
 router
-.get('/:id')
+.route('/:id')
 .get(getUserById)
 .put(updateUser)
 .delete(deleteUser);   
 
 router
-.get('/:id/friends/friendsId')
+.route('/:id/friends/friendsId')
 .post(addFriend)
 .delete(removeFriend);
 

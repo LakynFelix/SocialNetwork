@@ -10,7 +10,7 @@
 
  
 # Description: 
-I created a Mongoose & MongoDB SocialNetwork, NoSQL 
+Mongoose & MongoDB SocialNetwork
 
 # Usage: 
  Clone Repo -  Run npm install and then (npm start) to start the server. 

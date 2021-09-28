@@ -20,6 +20,8 @@
   "homepage": "https://github.com/LakynFelix/SocialNetwork#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.7"
+    "mongoose": "^6.0.7",
+    "nodemon": "^2.0.13",
+    "utils": "^0.3.1"
   }
 }

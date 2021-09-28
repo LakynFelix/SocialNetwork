@@ -24,7 +24,7 @@ Mongoose & MongoDB SocialNetwork
 ## Preview of Project:
 ![image](https://user-images.githubusercontent.com/84104126/134839182-3bd3e3ea-3876-475a-9e16-02616f1aff75.png) 
 
-## Video: 
+## Video: https://watch.screencastify.com/v/b7ZlVuJPAaqR0koJTJRx
 
 
 ## License:  

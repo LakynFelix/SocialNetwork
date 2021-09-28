@@ -15,7 +15,7 @@ const userController = {
         res.status(400).json(err);
       });
   },
- 
+
   getUserById({ params }, res) {
     User.findOne({ _id: params.id })
       .populate({
@@ -36,7 +36,7 @@ const userController = {
         res.status(400).json(err);
       });
   },
-  
+
   createUser({ body }, res) {
     User.create(body)
       .then((dbUserData) => res.json(dbUserData))
@@ -54,7 +54,7 @@ const userController = {
       })
       .catch((err) => res.status(400).json(err));
   },
- 
+
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
       .then((dbUserData) => {
@@ -67,16 +67,16 @@ const userController = {
       .catch((err) => res.status(400).json(err));
   },
 
-
-  addFriend({ params }, res) {
-    User.findOneAndUpdate(
-      { _id: params.id },
-      { $push: { friends: params.friendId } },
-      { new: true, runValidators: true }
-    )
+  addFriend({  body, params }, res) {
+    User.findOne({ _id: params.friendsId })
       .then((dbUserData) => {
+        User.findOneAndUpdate(
+          { _id: params.id },
+          { $push: { friends: {username: body.username , friendId: dbUserData._id} } },
+          { new: true, runValidators: true }
+        ).then((dbUserData) => console.log(dbUserData));
         if (!dbUserData) {
-          res.status(404).json({ message: "No user with that id!" });
+          res.status(404).json({ message: "No user with that Id!" });
           return;
         }
         res.json(dbUserData);
@@ -88,12 +88,12 @@ const userController = {
   removeFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.id },
-      { $pull: { friends: params.friendId } },
+      { $pull: { friends: params.friendsId } },
       { new: true, runValidators: true }
     )
       .then((dbUserData) => {
         if (!dbUserData) {
-          res.status(404).json({ message: "No user with that id!" });
+          res.status(404).json({ message: "No user with that Id!" });
           return;
         }
         res.json(dbUserData);

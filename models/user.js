@@ -20,8 +20,11 @@ const userSchema = new Schema({
         ref: 'Thought',
     }],
     friends: [{
+        username: String,
+        friendId: {
         type: Schema.Types.ObjectId,
-        ref: 'User',
+        ref: 'User'
+        }
     }],
 }, {
     toJSON: {
